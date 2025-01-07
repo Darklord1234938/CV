@@ -277,18 +277,120 @@ header h1{
     text-align: center;
 }
 
-.bttn img{
+.itch{
     border-radius: 10px;
-    width: 90%;
-    height: 90%;
-}
-.bttn img:hover {
-    width: 80%;
-    height: 80%;
+    width: 5%;
+    height: 5%;
+    border-style: none;
+    
 }
 
+.itch:hover{
+    border-radius: 10px;
+    width: 4%;
+    height: 4%;
+    border-style: groove;
+    border-color: rgb(255, 199, 209);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.containerP {
+  display: grid;
+  grid-auto-rows: 20%;
+  grid-auto-columns: 20%;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  background-color: dodgerblue;
+  column-gap: 1%;
+  row-gap: 4%;
+  padding: 10px;
+}
+
+.containerP > div {
+
+    border: 1px solid black;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 30px;
+    text-align: center;
+  }
+
+.containerP > div > Demo {
+  grid-column: 1 / span 3;
+}
+
+.Demo{
+    background-color: rgba(255, 166, 0, 0.726);
+    border-radius: 50px;
+}
+.Demo img{
+    width: 100%;
+    height: 70%;
+    border-radius: 50px;;
+}
+.Demo p{
+    font-size: 40%;
+    margin-bottom: 1%;
+}
+
+.Demo a{
+    background-color: rgba(0, 0, 0, 0.173);
+    display: inline-block;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 10px;
+    font-size: 100%;
+    border-color: rgba(207, 135, 0, 0.527);
+    border-style: groove;
+}
+
+.Demo a:hover{
+    background-color: rgba(0, 0, 0, 0.307);
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 10px;
+    font-size: 80%;
+    border-color: rgba(207, 135, 0, 0.367);
+    border-style: groove;
+}
+
+.IMG{
+    width: 70%;
+    height: 150%;
+}
 
 @media screen and (max-height: 700px) and ( max-width: 1025px)  {
+    .tooltip:hover .tooltiptext {
+        visibility:hidden;
+      }
+
     .item-1{
         grid-row: 1/2;
         grid-column: 2/6;
@@ -335,6 +437,10 @@ header h1{
 }
 
 @media screen and (min-height: 1376px) and ( min-width: 1024px)  {
+    .tooltip:hover .tooltiptext {
+        visibility:hidden;
+      }
+
     .about{
         font-size: 300%;
     }
@@ -416,7 +522,10 @@ header h1{
 }
 
 @media screen and (min-width: 300px) and ( min-height: 360px)  and (max-height: 940px) and ( max-width: 882px) {
-    
+    .tooltip:hover .tooltiptext {
+        visibility:hidden;
+      }
+
     *{
         font-size: 160%;   
     }
@@ -526,6 +635,10 @@ header h1{
 }
 
 @media screen and (max-height: 1370px) and ( max-width: 914px) and (min-height: 1020px) and ( min-width: 760px)  {
+    .tooltip:hover .tooltiptext {
+        visibility:hidden;
+      }
+    
     *{
         font-size: 150%;   
     }
